@@ -1,0 +1,63 @@
+.cabecalho__menu-hamburguer {
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/Menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+}
+
+.cabecalho {
+  background-color: var(--branco);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.container__imagem {
+  /* padding: 1em; os filhos do header ficaram muitos juntos */
+  padding: 0.5em;
+}
+
+/* estilizando o menu dropdown */
+.lista-menu {
+  display: none;  /* ocuta a lista e retira o espaço */
+  position: absolute;/*libera as orientações top, left, higth e butoom em relação a pagina. só é ativa se o pai for diferente de static por isso relative no cabecalho.*/
+  top: 100%; /*epura o menu 100% para baixo do header */
+  width: 60vw;
+
+}
+
+.container__botao {
+  display: none;
+}
+/* se cont__botao estiver com :checked o ~ vai procurar o elemento a seguir, e aplicar as propriedades */
+.container__botao:checked ~ .lista-menu {
+  display: block;
+}
+
+.lista-menu__titulo,
+.lista-menu__item {
+  padding: 0.5em;
+  background-color: var(--branco);
+}
+
+.lista-menu__titulo {
+  color: var(--laranja);
+  font-weight: 700;
+}
+
+.lista-menu__link {
+  background: var(--azul-degrade);
+  /* webkit é para compactibilidade em diferentes navegadores */
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:text;
+  background-clip: text; /* aplicada a cor de background apenas os texto desse elemento */
+  text-transform: uppercase;
+}
