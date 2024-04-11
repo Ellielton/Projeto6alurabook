@@ -4,7 +4,7 @@
   background-image: url("../img/Menu.svg");
   background-repeat: no-repeat;
   background-position: center;
-  display: inline-block;
+  display: inline-block; /*Permite manipular as dimensões do icone*/
 }
 
 .cabecalho {
@@ -34,9 +34,11 @@
 
 }
 
+/*Escode o caixa chackbox juntamento com sua dimensões a pagina  */
 .container__botao {
   display: none;
 }
+
 /* se cont__botao estiver com :checked o ~ vai procurar o elemento a seguir, e aplicar as propriedades */
 .container__botao:checked ~ .lista-menu {
   display: block;
