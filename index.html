@@ -14,6 +14,9 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!--===================== Cabeçalho ======================-->
+
   <header class="cabecalho">
     <div class="container">
       <!-- conctruindo o drop do menu hamburguer -->
@@ -51,14 +54,17 @@
       <a href="#"><img src="img/Compras.svg" alt="Carrinho de compras" class="container__imagem"></a>
       <a href="#"><img src="img/Usuario.svg" alt="Meu perfil" class="container__imagem"></a>
     </div>
-
   </header>
+
+  <!--============== Inicio do banner ==================-->
 
   <section class="banner">
     <h2 class="banner__titulo">Já sabe por onde começar?</h2>
     <p class="banner__texto">Encontre em nossa estante o que precisa para seu desenvolvimento!</p>
     <input type="search" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
 </section>
+
+<!--============= Primeiro carrossel ===============-->
 
 <section class="carrossel">
   <h2 class="carrossel__titulo">Novos lançamentos</h2>
@@ -77,9 +83,9 @@
     <div class="swiper-slide"><img src="img/Javascript.svg" alt="Livro sobre javascript assertivo da alurabooks"></div>
     <div class="swiper-slide"><img src="img/Guia Front-end.svg" alt="Livro Guia front end"></div>
     <div class="swiper-slide"><img src="img/Portugol.svg" alt="Livro sobre portugol"></div>
-    <div class="swiper-slide"><img src="img/Acessibilidade.svg" alt="livro sobre acessibilidade"></div>
+    <div class="swiper-slide"><img src="img/Acessibilidade.svg" alt="livro sobre acessibilidade">
+  </div>
  
-
   <!-- If we need navigation buttons -->
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
@@ -112,7 +118,9 @@
   </div>
 </div>
 </section>
-<!-- =======================================  Mais vendidios  ============================================= -->
+
+<!--======== Segundo carrossel e Mais vendidios ==========-->
+
 <section class="carrossel">
   <h2 class="carrossel__titulo">Mais Vendidos</h2>
 
@@ -167,20 +175,71 @@
   </div>
 </section>
 
+<!--========== Inicio do tópico =======================-->
 
+<section class="topicos">
+  <h2 class="topicos__titulo">TÓPICOS VISITADOS RECENTEMENTE</h2>
+
+  <ul class="topicos__lista">
+    <li class="topicos__item">
+      <a href="#" class="topicos__link">Android</a>
+    </li>
+    <li class="topicos__item">
+      <a href="#" class="topicos__link">Marketing Digital</a>
+    </li>
+    <li class="topicos__item">
+      <a href="#" class="topicos__link">Agile</a>
+    </li>
+    <li class="topicos__item">
+      <a href="#" class="topicos__link">Startups</a>
+    </li>
+    <li class="topicos__item">
+      <a href="#" class="topicos__link">HTML e CSS</a>
+    </li>
+    <li class="topicos__item">
+      <a href="#" class="topicos__link">Python</a>
+    </li>
+    <li class="topicos__item">
+      <a href="#" class="topicos__link">OO</a>
+    </li>
+    <li class="topicos__item">
+      <a href="#" class="topicos__link">Java</a>
+    </li>
+  </ul>
+</section>
+
+<!--========== Construção do Contato ==================-->
+
+<section class="contato">
+  <h2 class="contato__titulo">Fique por dentro das novidades!</h2>
+  <p class="contato__texto">Atualizações de e-books, novos livros, promoções e outros.</p>
+  <input type="email" placeholder="cadastre seu e-mail" class="contato__email"> 
+</section>
+
+<!--========== Elaborando o rodapé =============== -->
+<hr/>
+
+<footer class="rodape">
+  <h2 class="rodape__titulo">Grupo Alura</h2>
+</footer>
+
+<!--============== Importe do script do carrossel =========-->
 
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<!--============= Script que inicializa o carrossel ============-->
+
 <script>
   // Adcionando esses codigos abaixo já funcionará o carrossel.
   const swiper = new Swiper('.swiper', {
-  // speed: 400, velocidade de tara troca de slide, retirando ddeixamos automatico.
-  spaceBetween: 10,
-  slidesPerView:3,
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-  },
-});
+    // speed: 400, velocidade de tara troca de slide, retirando ddeixamos automatico.
+    spaceBetween: 10,
+    slidesPerView:3,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
+  });
 </script>
 </body>
 </html>
