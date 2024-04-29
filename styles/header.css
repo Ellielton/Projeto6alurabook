@@ -39,6 +39,8 @@
   display: none;
 }
 
+
+
 /* se cont__botao estiver com :checked o ~ vai procurar o elemento a seguir, e aplicar as propriedades */
 .container__botao:checked ~ .lista-menu {
   display: block;
@@ -59,7 +61,47 @@
   background: var(--azul-degrade);
   /* webkit é para compactibilidade em diferentes navegadores */
   -webkit-background-clip:text;
-  -webkit-text-fill-color:text;
+  -webkit-text-fill-color:transparent; /*Sem essa linha aparece o traço abixo da palavras  */
   background-clip: text; /* aplicada a cor de background apenas os texto desse elemento */
   text-transform: uppercase;
+}
+
+.container__titulo,
+.opcoes {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .cabecalho__menu-hamburguer {
+    display: none;
+  }
+
+  .container__titulo,
+  .container__titulo--negrito {
+    font-family: var(--fonte-secundario);
+    font-size: 30px;
+  }
+
+  .container__titulo {
+    font-weight: 400;
+    display: block;
+  }
+
+  .opcoes__item {
+    padding: 0 1em;
+    text-transform: uppercase;
+  }
+
+  .opcoes__link {
+    text-decoration: none;
+    color: var(--preto);
+  }
+
+  .container__titulo--negrito {
+    font-weight: 700;
+  }
+
+  .opcoes {
+    display: flex;
+  }
 }
