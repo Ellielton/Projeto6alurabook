@@ -66,16 +66,13 @@
   text-transform: uppercase;
 }
 
+/* retira da pagina o menu categoria, favprito, minha estante quando a tela for menor que 1024px */
 .container__titulo,
 .opcoes {
   display: none;
 }
 
 @media screen and (min-width: 1024px) {
-  .cabecalho__menu-hamburguer {
-    display: none;
-  }
-
   .container__titulo,
   .container__titulo--negrito {
     font-family: var(--fonte-secundario);
@@ -87,6 +84,14 @@
     display: block;
   }
 
+  .container__titulo--negrito {
+    font-weight: 700;
+  }
+  
+  .opcoes {
+    display: flex;
+  }
+
   .opcoes__item {
     padding: 0 1em;
     text-transform: uppercase;
@@ -96,12 +101,22 @@
     text-decoration: none;
     color: var(--preto);
   }
-
-  .container__titulo--negrito {
-    font-weight: 700;
+  
+  /* none remove da tela quando 1024px */
+  .container__imagem-transparente {
+    display: none;
   }
 
-  .opcoes {
-    display: flex;
+  .cabecalho__menu-hamburguer {
+    display: none;
+  }
+
+  .opcoes__botao:checked ~ .lista-menu {
+    display: block;
+    width: auto;
+  }
+
+  .opcoes__botao {
+    display: none;
   }
 }
