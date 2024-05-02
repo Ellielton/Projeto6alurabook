@@ -68,7 +68,8 @@
 
 /* retira da pagina o menu categoria, favprito, minha estante quando a tela for menor que 1024px */
 .container__titulo,
-.opcoes {
+.opcoes,
+.container__texto {
   display: none;
 }
 
@@ -118,5 +119,27 @@
 
   .opcoes__botao {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .container__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--preto);
+  }
+
+  .cabecalho {
+    padding: 0 2em;
+  }
+
+  .opcoes {
+    /*Com flex no pai isso joga a margem da esqueda toda para direirta */
+    margin-right: auto;
+  }
+
+  .container__texto {
+    display: block;
   }
 }
